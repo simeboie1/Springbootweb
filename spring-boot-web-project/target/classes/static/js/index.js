@@ -43,3 +43,13 @@ function loadDashboardDependencies() {
     link.href = '/dashboard.css';
     document.head.appendChild(link);
 }
+
+// 🆕 Load content on page load if ?load=... is present in URL
+document.addEventListener('DOMContentLoaded', () => {
+    const params = new URLSearchParams(window.location.search);
+    const load = params.get('load');
+
+    if (load) {
+        loadContent(`/${load}`);
+    }
+});

@@ -25,16 +25,11 @@ public class ProductController {
         return "products";
     }
 
-    /*@PostMapping("/products")
-    public ResponseEntity<Product> createProduct(@ModelAttribute Product product) {
-        Product createdProduct = productRepository.save(product);
-        return new ResponseEntity<>(createdProduct, CREATED); 
-        //return ResponseEntity.ok("Product created successfully!"); // Ska inte skapa en response Entity här, utan bara fortsätta stanna i index.html
-    }
-        */
     @PostMapping("/products")
-    public void createProduct(@ModelAttribute Product product) {
+    public String createProduct(@ModelAttribute Product product, Model model) {
         productRepository.save(product);
+        model.addAttribute("products", productRepository.findAll());
+        return "redirect:/?load=products"; // Redirect to the inventory page after creating a product
     }
 
     @GetMapping("/products/{id}")
@@ -45,7 +40,7 @@ public class ProductController {
     }
 
     @GetMapping("/inventory")
-    public String getDashboard(Model model) {
+    public String getProducts(Model model) {
         model.addAttribute("products", productRepository.findAll()); // Fetch all products
         return "inventory"; // Render the dashboard.html template
     }

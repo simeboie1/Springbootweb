@@ -1,3 +1,33 @@
+function submitProductForm(event){
+    event.preventDefault(); // Prevent the default form submission
+
+    const formData = new FormData(event.target);
+
+    fetch("/products", {
+        method: 'POST',
+        body: formData
+    })
+    .then(response => {
+        if(response.ok) {
+            loadProducts();
+        } else {
+            alert("Failed to create product.");
+        }
+    })
+}
+
+
+function loadProducts() {
+    fetch("/inventory")
+        .then(response => response.text())
+        .then(html => {
+            document.querySelector('.mainWindowBox').innerHTML = html;
+        })
+        .catch(error => {
+            console.error('Error loading products:', error);
+        });
+}
+/*
 document.addEventListener("DOMContentLoaded", () => {
     const productForm = document.getElementById("productForm");
 
@@ -32,3 +62,4 @@ document.addEventListener("DOMContentLoaded", () => {
         });
     });
 });
+*/

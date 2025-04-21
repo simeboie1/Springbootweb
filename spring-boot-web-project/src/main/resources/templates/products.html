@@ -14,7 +14,7 @@
     </div>
 
     <div>
-        <form action="productForm" th:action="@{/products}" th:object="${product}" method="post" class="formBox">
+        <form id="createProductForm" th:action="@{/products}" th:object="${product}" method="post" class="formBox" onsubmit="submitProductForm(event)">
             <div class="form-group">
                 <label for="name">Name:</label>
                 <input type="text" id="name" name="name" th:field="*{name}" required>

@@ -1,6 +1,8 @@
 TODO
 Small
 Fix button position in customers
+Sort och sökning i Customers och inventory fungerar inte
+Add a confirmation when adding customer or product
 
 
 Big
@@ -10,7 +12,7 @@ Fix login
 
 
 Bugs
-Fix being redirected when creating a new product or customer
+Fix being redirected when creating a new customer
 
 
 
