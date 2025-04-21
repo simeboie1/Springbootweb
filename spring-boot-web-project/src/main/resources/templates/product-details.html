@@ -1,0 +1,13 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <title>Product Details</title>
+</head>
+<body>
+    <h1 th:text="${product.name}"></h1>
+    <p th:text="${product.description}"></p>
+    <p>Price: $<span th:text="${product.price}"></span></p>
+    <p>Stock Quantity: <span th:text="${product.stockQuantity}"></span></p>
+</body>
+</html>

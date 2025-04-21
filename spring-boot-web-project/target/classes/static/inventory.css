@@ -1,0 +1,77 @@
+body {
+    font-family: 'Press Start 2P', cursive;
+    background: linear-gradient(135deg, #2b2b2b, #4d4d4d);
+    color: #00ffcc;
+    margin: 0;
+    padding: 0;
+}
+
+.titleBox {
+    width: 95%;
+    padding: 20px;
+    background: linear-gradient(90deg, #ff6600, #ffcc33); /* Brighter horizontal gradient */
+    border-bottom: 4px solid #000000;
+    text-align: center;
+    z-index: 1000;
+    position: relative;
+    margin: 1px;
+}
+
+.mainWindowBox {
+    margin-left: 270px; /* Push it to the right of the sidebar */
+    width: calc(100% - 350px); /* Adjust width to account for the sidebar */
+    height: calc(100vh - 330px); /* Full height minus the titleBox */
+    background: #2b2b2b; /* Brighter dark background */
+    color: #00ffcc;
+    padding: 20px;
+    overflow-y: hidden;
+    border-left: 4px solid #000000;
+    box-shadow: 0px 0px 10px #00ffcc; /* Subtle glow effect */
+    position: relative; /* Ensure it respects the layout */
+    z-index: 1; /* Ensure it stays below the sidebar */
+}
+
+.productTable {
+    width: 100%;
+    border-collapse: collapse;
+    margin: 20px 0;
+    font-size: 0.9rem;
+    color: #00ffcc;
+}
+
+.productTable th, .productTable td {
+    border: 2px solid #00ffcc;
+    padding: 10px;
+    text-align: left;
+}
+
+.productTable th {
+    background-color: #000000;
+    color: #ffcc33;
+    text-transform: uppercase;
+}
+
+.productTable tr:nth-child(even) {
+    background-color: #2b2b2b;
+}
+
+.productTable tr:hover {
+    background-color: #444444;
+    color: #ffffff;
+}
+
+
+.filterBox {
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 20px;
+}
+
+#searchBar, #stockFilter {
+    padding: 10px;
+    font-size: 0.9rem;
+    border: 2px solid #00ffcc;
+    border-radius: 5px;
+    background-color: #2b2b2b;
+    color: #00ffcc;
+}

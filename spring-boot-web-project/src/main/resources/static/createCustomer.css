@@ -1,0 +1,107 @@
+/* General styles for the Products page */
+body {
+    font-family: 'Press Start 2P', cursive; /* Pixelated retro font */
+    background: linear-gradient(135deg, #2b2b2b, #4d4d4d); /* Brighter dark gradient */
+    color: #00ffcc; /* Softer neon green text */
+    margin: 0;
+    padding: 0;
+}
+
+h1 {
+    color: #ffcc33; /* Bright yellow for retro feel */
+    text-shadow: 3px 3px 0px #000000; /* Retro shadow effect */
+    text-align: center;
+    margin: 20px 0;
+}
+
+/* Add the styles for .mainWindowBox here */
+.mainWindowBox {
+    margin-left: 270px; /* Push it to the right of the sidebar */
+    width: calc(100% - 350px); /* Adjust width to account for the sidebar */
+    height: calc(100vh - 330px); /* Full height minus the titleBox */
+    background: #2b2b2b; /* Brighter dark background */
+    color: #00ffcc;
+    padding: 20px;
+    overflow-y: hidden;
+    border-left: 4px solid #000000;
+    box-shadow: 0px 0px 10px #00ffcc; /* Subtle glow effect */
+    position: relative; /* Ensure it respects the layout */
+    z-index: 1; /* Ensure it stays below the sidebar */
+}
+/* Form styles */
+form {
+    margin: 0 auto; /* Align the form to the left */
+    padding: 0; /* Remove extra padding */
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+    font-size: 1rem;
+}
+
+.form-group {
+    display: flex;
+    align-items: center;
+    gap: 20px;
+
+    
+}
+.formBox{
+    position: absolute;
+}
+
+label {
+    font-weight: bold;
+    color: #ffcc33; /* Bright yellow for labels */
+    width: 180px; /* Fixed width for alignment */
+    text-align: right;
+}
+
+input, textarea, .mainWindowBox button {
+    font-family: 'Press Start 2P', cursive;
+    font-size: 1rem;
+    padding: 10px;
+    max-height: 100px;
+    border: 2px solid #00ffcc;
+    border-radius: 5px;
+    background-color: #000000;
+    color: #00ffcc;
+    transition: all 0.3s ease;
+    flex: 1; /* Make inputs stretch to fill available space */
+}
+
+textarea {
+    resize: vertical; /* Allow vertical resizing */
+}
+
+input:focus, textarea:focus {
+    outline: none;
+    border-color: #ffcc33; /* Highlighted border on focus */
+}
+
+button {
+    cursor: pointer;
+    background-color: #00ffcc;
+    color: #000000;
+    text-transform: uppercase;
+    padding: 10px 20px;
+    border-radius: 5px;
+    border: 2px solid #00ffcc;
+    transition: all 0.3s ease;
+}
+
+button:hover {
+    background-color: #ffcc33;
+    color: #000000;
+}
+
+
+.titleBox {
+    width: 95%;
+    padding: 20px;
+    background: linear-gradient(90deg, #ff6600, #ffcc33); /* Brighter horizontal gradient */
+    border-bottom: 4px solid #000000;
+    text-align: center;
+    z-index: 1000;
+    position: relative;
+    margin: 1px;
+}

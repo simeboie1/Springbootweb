@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Homepage</title>
+    <!-- Link to external CSS -->
+    <link rel="stylesheet" href="/index.css">
+    <link href="https://fonts.googleapis.com/css2?family=Press+Start+2P&display=swap" rel="stylesheet">
+</head>
+<body>
+    <div class="titleBox">
+        <h1>Retro Business Central</h1>
+    </div>
+
+    <div class="navBarBox">
+        <button>Home</button>
+        <button>Profile</button>
+        <button>Help</button>
+        <button>Logout</button>
+    </div>
+
+    <div class="sideBarBox">
+        <a href="/dashboard" class="button" onclick="loadContent('/dashboard', event)">Dashboard</a>
+        <a href="/sales" class="button" onclick="loadContent('/sales', event)">Sales</a>
+        <a href="/products" class="button" onclick="loadContent('/products', event)">Products</a>
+        <a href="/inventory" class="button" onclick="loadContent('/inventory', event)">Inventory</a>
+        <a href="/customer" class="button" onclick="loadContent('/customer', event)">Customer</a>
+        <a href="/settings" class="button" onclick="loadContent('/settings', event)">Settings</a>
+    </div>
+
+    <div class="mainWindowBox">
+        <p>Welcome to the Retro Business Central! Select an option from the sidebar to get started.</p>
+    </div>
+
+
+    <script src="/js/index.js"></script>
+
+</body>
+</html>

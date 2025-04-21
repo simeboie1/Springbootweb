@@ -1,0 +1,18 @@
+TODO
+Small
+Fix button position in customers
+
+
+Big
+Implement Sales
+Fix login
+
+
+
+Bugs
+Fix being redirected when creating a new product or customer
+
+
+
+
+

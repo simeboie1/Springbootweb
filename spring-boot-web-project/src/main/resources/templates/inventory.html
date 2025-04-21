@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Inventory</title>
+    <link rel="stylesheet" href="/inventory.css">
+    <link href="https://fonts.googleapis.com/css2?family=Press+Start+2P&display=swap" rel="stylesheet">
+</head>
+<body>
+    <div class="titleBox">
+        <h1>Inventory</h1>
+    </div>
+
+    <div>
+        <h2>Product Overview</h2>
+        <table class="productTable">
+            <thead>
+                <tr>
+                    <th>ID</th>
+                    <th>Name</th>
+                    <th>Description</th>
+                    <th>Price</th>
+                    <th>Stock Quantity</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr th:each="product : ${products}">
+                    <td th:text="${customer.id}"></td>
+                    <td th:text="${customer.name}"></td>
+                    <td th:text="${customer.description}"></td>
+                    <td th:text="${customer.price}"></td>
+                    <td th:text="${customer.stockQuantity}"></td>
+                </tr>
+            </tbody>
+        </table>
+    </div>
+    <div class="filterBox">
+        <input type="text" id="searchBar" placeholder="Search by name..." onkeyup="filterTable()">
+        <select id="stockFilter" onchange="filterByStock()">
+            <option value="">Filter by Stock</option>
+            <option value="low">Low Stock</option>
+            <option value="out">Out of Stock</option>
+        </select>
+    </div> 
+
+    <script src="/js/inventory.js"></script>
+</body>
+</html>

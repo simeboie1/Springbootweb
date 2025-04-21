@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Inventory</title>
+    <link rel="stylesheet" href="/customer.css">
+    <link href="https://fonts.googleapis.com/css2?family=Press+Start+2P&display=swap" rel="stylesheet">
+</head>
+<body>
+    <div class="titleBox">
+        <h1>Customers</h1>
+    </div>
+
+    <div>
+        <h2>Customer Overview</h2>
+        <table class="productTable">
+            <thead>
+                <tr>
+                    <th>ID</th>
+                    <th>Name</th>
+                    <th>Description</th>
+                    <th>Email</th>
+                    <th>Adress</th>
+                    <th>Phone</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr th:each="Customer : ${customer}">
+                    <td th:text="${customer.id}"></td>
+                    <td th:text="${customer.name}"></td>
+                    <td th:text="${customer.description}"></td>
+                    <td th:text="${customer.email}"></td>
+                    <td th:text="${customer.adress}"></td>
+                    <td th:text="${customer.phoneNumber}"></td>
+                </tr>
+            </tbody>
+        </table>
+    </div>
+    <div class="filterBox">
+        <input type="text" id="searchBar" placeholder="Search by name..." onkeyup="filterTable()">
+        <select id="stockFilter" onchange="filterByStock()">
+            <option value="">Filter by Stock</option>
+            <option value="low">Low Stock</option>
+            <option value="out">Out of Stock</option>
+        </select>
+    </div> 
+
+    <div class="buttonBox">
+        <a href="/createCustomer" class="button" onclick="loadContent('/createCustomer', event)"> Create Customer</a>
+        <a href="/sales" class="button">Create Sale</a>
+    </div>
+    <script src="/js/customer.js"></script>
+</body>
+</html>
