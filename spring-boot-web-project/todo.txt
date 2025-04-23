@@ -12,7 +12,8 @@ Fix login
 
 
 Bugs
-Fix being redirected when creating a new customer
+Load is stuck all the time and can make you load the wrong page even if you are visiting another. Could perhaps be fixed when adding more features. But index will always have this problem atm
+
 
 
 
