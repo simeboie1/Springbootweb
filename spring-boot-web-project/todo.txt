@@ -16,6 +16,16 @@ Load is stuck all the time and can make you load the wrong page even if you are 
 
 
 
+Sales vision boar
+Lägg till baskonto plan i Settings
+
+Ordning för Sales
+Skicka ett epost till en kund som finns registrerad med spring-boot email
+Låt dem acceptera (eller bara låtsas att de alltid är accepterat)
+Skapa en order. Skicka faktura på main med korrekt momsats utifrån baskontoplan osv
+
+Skapa lagerplatser eller låt produkter försvinna från inventory
+Skicka ett email att paketet är skickat.
 
 
 
