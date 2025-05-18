@@ -1,8 +1,8 @@
 com\example\springbootwebproject\repository\ProductRepository.class
-com\example\springbootwebproject\controller\ProductController.class
-com\example\springbootwebproject\controller\HomeController.class
 com\example\springbootwebproject\model\Customer.class
 com\example\springbootwebproject\repository\CustomerRepository.class
 com\example\springbootwebproject\SpringBootWebProjectApplication.class
+com\example\springbootwebproject\controller\ProductController.class
+com\example\springbootwebproject\controller\HomeController.class
 com\example\springbootwebproject\model\Product.class
 com\example\springbootwebproject\controller\CustomerController.class

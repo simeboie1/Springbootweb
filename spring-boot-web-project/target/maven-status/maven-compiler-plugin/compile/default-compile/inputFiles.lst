@@ -1,8 +1,12 @@
 C:\Users\DimeFajkingBoien\Desktop\Springbootweb\spring-boot-web-project\src\main\java\com\example\springbootwebproject\controller\CustomerController.java
 C:\Users\DimeFajkingBoien\Desktop\Springbootweb\spring-boot-web-project\src\main\java\com\example\springbootwebproject\controller\HomeController.java
 C:\Users\DimeFajkingBoien\Desktop\Springbootweb\spring-boot-web-project\src\main\java\com\example\springbootwebproject\controller\ProductController.java
+C:\Users\DimeFajkingBoien\Desktop\Springbootweb\spring-boot-web-project\src\main\java\com\example\springbootwebproject\controller\SalesController.java
 C:\Users\DimeFajkingBoien\Desktop\Springbootweb\spring-boot-web-project\src\main\java\com\example\springbootwebproject\model\Customer.java
 C:\Users\DimeFajkingBoien\Desktop\Springbootweb\spring-boot-web-project\src\main\java\com\example\springbootwebproject\model\Product.java
+C:\Users\DimeFajkingBoien\Desktop\Springbootweb\spring-boot-web-project\src\main\java\com\example\springbootwebproject\model\SaleProduct.java
+C:\Users\DimeFajkingBoien\Desktop\Springbootweb\spring-boot-web-project\src\main\java\com\example\springbootwebproject\model\Sales.java
 C:\Users\DimeFajkingBoien\Desktop\Springbootweb\spring-boot-web-project\src\main\java\com\example\springbootwebproject\repository\CustomerRepository.java
 C:\Users\DimeFajkingBoien\Desktop\Springbootweb\spring-boot-web-project\src\main\java\com\example\springbootwebproject\repository\ProductRepository.java
+C:\Users\DimeFajkingBoien\Desktop\Springbootweb\spring-boot-web-project\src\main\java\com\example\springbootwebproject\repository\SalesRepository.java
 C:\Users\DimeFajkingBoien\Desktop\Springbootweb\spring-boot-web-project\src\main\java\com\example\springbootwebproject\SpringBootWebProjectApplication.java

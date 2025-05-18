@@ -3,36 +3,39 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Inventory</title>
+    <title>Sales Overview</title>
     <link rel="stylesheet" href="/customer.css">
     <link href="https://fonts.googleapis.com/css2?family=Press+Start+2P&display=swap" rel="stylesheet">
 </head>
 <body>
     <div class="titleBox">
-        <h1>Customers</h1>
+        <h1>Sales Overview</h1>
     </div>
 
     <div>
-        <h2>Customer Overview</h2>
+        <h2>Sales</h2>
         <table class="productTable">
             <thead>
                 <tr>
                     <th>ID</th>
-                    <th>Name</th>
-                    <th>Description</th>
-                    <th>Email</th>
-                    <th>Adress</th>
-                    <th>Phone</th>
+                    <th>Customer</th>
+                    <th>Date</th>
+                    <th>Products</th>
+                    <th>Total Price</th>
                 </tr>
             </thead>
             <tbody>
-                <tr th:each="customer : ${customers}">
-                    <td th:text="${customer.id}"></td>
-                    <td th:text="${customer.name}"></td>
-                    <td th:text="${customer.description}"></td>
-                    <td th:text="${customer.email}"></td>
-                    <td th:text="${customer.adress}"></td>
-                    <td th:text="${customer.phoneNumber}"></td>
+                <tr th:each="sale : ${sales}">
+                    <td th:text="${sale.id}"></td>
+                    <td th:text="${sale.customer.name}"></td>
+                    <td th:text="${#temporals.format(sale.saleDate, 'yyyy-MM-dd HH:mm')}"></td>
+                    <td>
+                        <ul>
+                            <li th:each="sp : ${sale.saleProducts}"
+                                th:text="${sp.product.name} + ' x' + ${sp.quantity}"></li>
+                        </ul>
+                    </td>
+                    <td th:text="${sale.totalPrice}"></td>
                 </tr>
             </tbody>
         </table>
@@ -47,8 +50,8 @@
     </div> 
 
     <div class="buttonBox">
-        <a href="/createCustomer" class="button" onclick="loadContent('/createCustomer', event)"> Create Customer</a>
-        <a href="/sales" class="button" onclick="loadContent('/createSale', event)">Create Sale</a>
+        <a href="/createCustomer" class="button" onclick="loadContent('/createCustomer', event)">Create Customer</a>
+        <a href="/createSale" class="button" onclick="loadContent('/createSale', event)">Create Sale</a>
     </div>
     <script src="/js/customer.js"></script>
 </body>

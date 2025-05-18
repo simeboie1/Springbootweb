@@ -10,35 +10,29 @@
 </head>
 <body>
     <div class="titleBox">
-        <h1>Create a New Customer</h1>
+        <h1>Create a New Sale</h1>
     </div>
 
     <div>
-        <form action="productForm" th:action="@{/createCustomer}" th:object="${customer}" method="post" class="formBox">
+        <form th:action="@{/createSale}" th:object="${sales}" method="post" class="formBox">
             <div class="form-group">
-                <label for="name">Name:</label>
-                <input type="text" id="name" name="name" th:field="*{name}" required>
-            </div>
-            <div class="form-group">
-                <label for="description">Description:</label>
-                <textarea id="description" name="description" th:field="*{description}" required></textarea>
-            </div>
-            <div class="form-group">
-                <label for="adress">Address:</label>
-                <input type="text" id="adress" th:field="*{adress}" required>
-            </div>
-            <div class="form-group">
-                <label for="phoneNumber">Phone Number:</label>
-                <input type="text" id="phoneNumber" th:field="*{phoneNumber}" required>
-            </div>
-            <div class="form-group">
-                <label for="email">Email:</label>
-                <input type="email" id="email" th:field="*{email}" required>
-            </div>
-            <div class="form-group">
-                <button type="submit">Create Customer</button>
-            </div>
-        </form>
+            <label for="customer">Customer:</label>
+            <select id="customer" name="customerId" th:field="*{customer}" required>
+                <option th:each="customer : ${customers}" th:value="${customer.id}" th:text="${customer.name}"></option>
+            </select>
+    </div>
+    <div class="form-group">
+        <label>Products and Quantities:</label>
+        <div th:each="product, iterStat : ${products}">
+            <span th:text="${product.name} + ' (Stock: ' + ${product.stockQuantity} + ')'"></span>
+            <input type="number" min="0" name="quantities" value="0" />
+            <input type="hidden" name="productIds" th:value="${product.id}" />
+        </div>
+    </div>
+    <div class="form-group">
+        <button type="submit">Create Sale</button>
+    </div>
+</form>
     </div>
 
     <script src="/js/createCustomer.js"></script>
